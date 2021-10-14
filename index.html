@@ -16,19 +16,26 @@
 
 <body>
     <header>
-        <a href="index.html"> <img src="assets/media/logo_small_icon_only.png" alt="logo" width="50px" height="50px"></a>
         <nav class="navbar-top">
-            <ul class="navbar-top-list">
-                <li class="navbar-top-list-item">
-                    <a href="index.html">Inicio</a>
+            <ul>
+                <li class="icono">
+                    <a href="index.html"> <img src="assets/media/logo_small_icon_only.png" alt="logo" width="40px" height="40px"></a>
                 </li>
-                <li class="navbar-top-list-item">
+                <li class="activo">
+                    <a class="activo" href="index.html">Inicio</a>
+                </li>
+                <li>
                     <a href="blog.html">Blog</a>
                 </li>
-                <li class="navbar-top-list-item">
+                <li>
                     <a href="services.html">Servicios</a>
+                    <ul id="submenu">
+                        <li><a href="services.html#sessions">Sesiones</a></li>
+                        <li><a href="services.html#weddings">Bodas</a></li>
+                        <li><a href="services.html#other">Otros eventos</a></li>
+                    </ul>
                 </li>
-                <li class="navbar-top-list-item">
+                <li>
                     <a href="contact.html">Contacto</a>
                 </li>
             </ul>
@@ -44,13 +51,15 @@
         -->
     </header>
     <br>
-    <button class="arr left"><img src="assets/media/flecha.png" alt="flecha"></button>
-    <div>
-        <!-- Hero div -->
-        <!-- Aquí va una foto de fondo que se pone en la hoja de estilos -->
-        <h1>Alesvolta</h1>
+    <div class="hero">
+        <button class="arr left"><img src="assets/media/flecha.png" alt="flecha"></button>
+        <div>
+            <!-- Hero div -->
+            <!-- Aquí va una foto de fondo que se pone en la hoja de estilos -->
+            <h1>Alesvolta</h1>
+        </div>
+        <button class="arr right"><img src="assets/media/flecha.png" alt="flecha"></button>
     </div>
-    <button class="arr right"><img src="assets/media/flecha.png" alt="flecha"></button>
 
     <div>
         <div>

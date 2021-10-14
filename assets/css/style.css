@@ -3,9 +3,9 @@
 :root {
     /* Variables globales */
     --gris: #5e6666;
-    --azulcielo: #e0e8ff;
-    --azulcielo-active: #7e8495;
-    --azulcielo-hover: #9fa6bc;
+    --azulcielo: #c0cffc;
+    --azulcielo-active: #697699;
+    --azulcielo-hover: #8995bb;
     --verde: #656b42;
     --verde-active: #747b4d;
     --verde-hover: #96a350;
@@ -18,10 +18,15 @@
     --akira: 'Akira Expanded', sans-serif;
 }
 
+
+/* DEFAULT */
+
 * {
     margin: 0%;
     padding: 0%;
     font-family: var(--roboto);
+    list-style-type: none;
+    text-decoration: none;
 }
 
 header {
@@ -41,48 +46,91 @@ body {
 }
 
 button img {
-    width: fit-content;
-    height: fit-content;
+    width: 10px;
+    height: 10px;
 }
 
 .left {
     transform: rotate(180deg);
 }
 
-
-/* 
-.navbar-top-list {
-    list-style-type: none;
-    text-decoration: none;
+.hero {
+    display: flex;
+    justify-content: space-evenly;
 }
 
-.navbar-top-list-item {
-    padding-left: 3px;
+
+/*
+
+NAVIGATION MENU STARTS
+
+*/
+
+.navbar-top .icono {
+    padding-right: 700px;
+}
+
+.navbar-top {
+    height: 66px;
+}
+
+.navbar-top ul {
+    background-color: var(--azulcielo);
+    list-style: none;
+    width: 100%;
+}
+
+.navbar-top li {
     float: left;
+    position: relative;
+    width: auto;
 }
 
-a {
-    text-decoration: none;
-    font-family: var(--overpass);
-    font-size: 2em;
-}
-
-a:visited {
+.navbar-top a {
+    background-color: var(--azulcielo);
     color: #000000;
+    display: block;
+    font: bold 12px/20px var(--julius);
+    padding: 10px 25px;
+    text-align: center;
+    transition: all .25s ease;
 }
 
-.navbar-top-list-item li:active {
-    color: red;
-    background-color: var(--verde-active);
+.navbar-top a:hover {
+    background-color: var(--azulcielo-hover);
 }
 
-.navbar-top-list-item a {
-    padding: 3px;
-    transition: .2s;
-    background-color: var(--verde);
+.navbar-top li:hover ul#submenu {
+    opacity: 1;
+    top: 40px;
+    visibility: visible;
 }
 
-.navbar-top-list-item a:hover {
-    transition: .2s;
-    background-color: var(--verde-hover);
-} */
+#submenu {
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 35px;
+    visibility: hidden;
+    z-index: 1;
+}
+
+#submenu li {
+    float: none;
+    width: inherit;
+}
+
+#submenu a {
+    background-color: var(--azulcielo);
+}
+
+#submenu a:hover {
+    background-color: var(--azulcielo-hover);
+}
+
+
+/*
+
+NAVIGATION MENU ENDS
+
+*/

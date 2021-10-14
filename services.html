@@ -7,26 +7,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link rel="stylesheet" href="assets/css/style.css">
     <title>alesvolta - Servicios</title>
 </head>
 
 <body>
     <header>
-        <a href="index.html"> <img src="assets/media/logo_small_icon_only.png" alt="logo" width="50px" height="50px"></a>
         <nav class="navbar-top">
-            <ul class="navbar-top-list">
-                <li class="navbar-top-list-item">
+            <ul>
+                <li>
+                    <a href="index.html"> <img src="assets/media/logo_small_icon_only.png" alt="logo" width="50px" height="50px"></a>
+                </li>
+                <li>
                     <a href="index.html">Inicio</a>
                 </li>
-                <li class="navbar-top-list-item">
+                <li>
                     <a href="blog.html">Blog</a>
                 </li>
-                <li class="navbar-top-list-item">
+                <li class="activo">
                     <a href="services.html">Servicios</a>
+                    <ul id="submenu">
+                        <li><a href="services.html#sessions">Sesiones</a></li>
+                        <li><a href="services.html#weddings">Bodas</a></li>
+                        <li><a href="services.html#other">Otros eventos</a></li>
+                    </ul>
                 </li>
-                <li class="navbar-top-list-item">
+                <li>
                     <a href="contact.html">Contacto</a>
                 </li>
             </ul>
@@ -43,19 +49,19 @@
 
     </header>
 
-    <div>
+    <div id="sessions">
         <h2>Sesiones</h2>
         <aside></aside>
         <!-- Foto de fondo -->
     </div>
 
-    <div>
+    <div id="weddings">
         <h2>Bodas</h2>
         <aside></aside>
         <!-- Foto de fondo -->
     </div>
 
-    <div>
+    <div id="other">
         <h2>Otros eventos</h2>
         <aside></aside>
         <!-- Foto de fondo -->
