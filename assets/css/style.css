@@ -1,0 +1,88 @@
+@import url('http://fonts.cdnfonts.com/css/akira-expanded');
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Overpass&family=Roboto:wght@300&display=swap');
+:root {
+    /* Variables globales */
+    --gris: #5e6666;
+    --azulcielo: #e0e8ff;
+    --azulcielo-active: #7e8495;
+    --azulcielo-hover: #9fa6bc;
+    --verde: #656b42;
+    --verde-active: #747b4d;
+    --verde-hover: #96a350;
+    --marron: #765342;
+    --marron-active: #563d31;
+    --marron-hover: #946b58;
+    --roboto: 'Roboto', sans-serif;
+    --overpass: 'Overpass', sans-serif;
+    --julius: 'Julius Sans One', sans-serif;
+    --akira: 'Akira Expanded', sans-serif;
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: var(--roboto);
+}
+
+header {
+    background-color: var(--azulcielo);
+}
+
+h1 {
+    text-align: center;
+    font-family: var(--akira);
+    color: #000000;
+    font-size: 5em;
+    letter-spacing: 0.15em;
+}
+
+body {
+    background-image: url('/assets/media/instagram.png');
+}
+
+button img {
+    width: fit-content;
+    height: fit-content;
+}
+
+.left {
+    transform: rotate(180deg);
+}
+
+
+/* 
+.navbar-top-list {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.navbar-top-list-item {
+    padding-left: 3px;
+    float: left;
+}
+
+a {
+    text-decoration: none;
+    font-family: var(--overpass);
+    font-size: 2em;
+}
+
+a:visited {
+    color: #000000;
+}
+
+.navbar-top-list-item li:active {
+    color: red;
+    background-color: var(--verde-active);
+}
+
+.navbar-top-list-item a {
+    padding: 3px;
+    transition: .2s;
+    background-color: var(--verde);
+}
+
+.navbar-top-list-item a:hover {
+    transition: .2s;
+    background-color: var(--verde-hover);
+} */
