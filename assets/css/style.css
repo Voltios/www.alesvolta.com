@@ -36,13 +36,38 @@ header {
 h1 {
     text-align: center;
     font-family: var(--akira);
-    color: #000000;
+    color: #FFFFFF;
+    background-color: transparent;
     font-size: 5em;
     letter-spacing: 0.15em;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-body {
-    background-image: url('/assets/media/instagram.png');
+h2 {
+    font-family: var(--akira);
+}
+
+.hero-img {
+    height: 200px;
+    width: 100%;
+    background-image: url("../media/a1a.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.big-container {
+    display: block;
+}
+
+.img-container {
+    width: 500px;
+    height: 20px;
+}
+
+.sample-img {
+    width: min-content;
+    height: min-content;
 }
 
 button img {
@@ -90,7 +115,7 @@ NAVIGATION MENU STARTS
     background-color: var(--azulcielo);
     color: #000000;
     display: block;
-    font: bold 12px/20px var(--julius);
+    font: bold 0.9em/1.2em var(--julius);
     padding: 10px 25px;
     text-align: center;
     transition: all .25s ease;
