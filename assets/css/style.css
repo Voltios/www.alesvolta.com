@@ -47,6 +47,10 @@ h2 {
     font-family: var(--akira);
 }
 
+.activo a {
+    background-color: var(--azulcielo-active);
+}
+
 .hero-img {
     height: 200px;
     width: 100%;
@@ -56,23 +60,14 @@ h2 {
     position: relative;
 }
 
-.big-container {
-    display: block;
-}
-
-.img-container {
-    width: 500px;
-    height: 20px;
-}
-
 .sample-img {
-    width: min-content;
-    height: min-content;
+    width: 100%;
+    height: 50px;
 }
 
 button img {
-    width: 10px;
-    height: 10px;
+    width: 30px;
+    height: 30px;
 }
 
 .left {
@@ -87,12 +82,12 @@ button img {
 
 /*
 
-NAVIGATION MENU STARTS
+    NAVIGATION MENU BEGINS
 
 */
 
 .navbar-top .icono {
-    padding-right: 700px;
+    padding-right: 10px;
 }
 
 .navbar-top {
@@ -156,6 +151,96 @@ NAVIGATION MENU STARTS
 
 /*
 
-NAVIGATION MENU ENDS
+    NAVIGATION MENU ENDS
 
+*/
+
+
+/*
+
+    IMAGES CONTAINER BEGINS
+
+*/
+
+.img-container {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+    height: 500px;
+}
+
+.img-container img {
+    width: 100%;
+}
+
+.big-container {
+    background-color: #765342;
+    overflow: hidden;
+}
+
+
+/*
+    IMAGES CONTAINER ENDS
+*/
+
+article h2 {
+    text-align: center;
+}
+
+article p {
+    padding: 10px 20px;
+    text-align: justify;
+}
+
+
+/*
+    ASIDE CONTAINER BEGINS
+*/
+
+.navegador-articulos {
+    margin: 20px 0 0 30px;
+    width: 33%
+}
+
+.navegador-articulos ol li {
+    list-style-type: upper-roman;
+}
+
+.navegador-articulos a {
+    padding: 10px 0;
+    display: block;
+}
+
+
+/*
+    ASIDE CONTAINER ENDS
+*/
+
+
+/*
+    FOOTER BEGINS
+*/
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+.footer-list {
+    display: inline;
+    float: right;
+}
+
+.footer-list-item {
+    padding: 0 5px;
+    display: inline;
+    float: right;
+}
+
+
+/*
+    FOOTER ENDS
 */
