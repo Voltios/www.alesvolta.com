@@ -12,48 +12,53 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar-top">
-            <div class="navbar-top-header">
-                <div class="navbar-top-title">
-                    <div class="icono">
-                        <a href="index.html"> <img src="assets/media/logo_small_icon_only.png" alt="logo" width="40px" height="40px"></a>
-                    </div>
-                </div>
-                <div class="navbar-top-links">
-                    <ul>
-                        <li class="activo">
-                            <a class="activo" href="index.html">Inicio</a>
-                        </li>
-                        <li>
-                            <a href="blog.html">Blog</a>
-                        </li>
-                        <li>
-                            <a href="services.html">Servicios</a>
-                            <ul id="submenu">
-                                <li><a href="services.html">Sesiones</a></li>
-                                <li><a href="services.html">Bodas</a></li>
-                                <li><a href="services.html">Otros eventos</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="contact.html">Contacto</a>
-                        </li>
-                    </ul>
-                </div>
+    <div class="cursor"></div>
+    <script>
+        const cursor = document.querySelector('.cursor');
+        document.addEventListener('mousemove', e => {
+            cursor.setAttribute("style", "top: " + (e.pageY - 8) + "px; left: " + (e.pageX - 8) + "px;")
+        })
+        document.addEventListener('click', () => {
+            cursor.classList.add("expand");
 
-            </div>
-        </nav>
-        <!-- 
-            Dark mode toggler
-            <input type="checkbox">
-        <label for="checkbox">
-            <i class="fas fa-moon"></i>
-            <i class="fas fa-sun"></i>
-            <div></div>
-        </label>
-        -->
-    </header>
+            setTimeout(() => {
+                cursor.classList.remove("expand");
+            }, 500)
+        });
+    </script>
+
+    <div class="nav-container">
+        <header>
+            <a href="index.html" class="logo">Ales Volta</a>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="services.html">Servicios</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contacto</a>
+                    </li>
+                    <li>
+                        <a href="blog.html">Blog</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="social-header">
+            <ul>
+                <li>
+                    <a href="#"><img src="assets/media/twitter.png" alt="twitter"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="assets/media/instagram.png" alt="instagram"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="assets/media/snapchat.png" alt="snapchat"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
     <form action="">
         <label name="fname">Nombre y apellidos</label>
         <input type="text" placeholder="Nombre y apellidos:">
