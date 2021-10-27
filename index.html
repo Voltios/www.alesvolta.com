@@ -18,28 +18,35 @@
 <body>
     <header>
         <nav class="navbar-top">
-            <ul>
-                <li class="icono">
-                    <a href="index.html"> <img src="assets/media/logo_small_icon_only.png" alt="logo" width="40px" height="40px"></a>
-                </li>
-                <li class="activo">
-                    <a class="activo" href="index.html">Inicio</a>
-                </li>
-                <li>
-                    <a href="blog.html">Blog</a>
-                </li>
-                <li>
-                    <a href="services.html">Servicios</a>
-                    <ul id="submenu">
-                        <li><a href="services.html#sessions">Sesiones</a></li>
-                        <li><a href="services.html#weddings">Bodas</a></li>
-                        <li><a href="services.html#other">Otros eventos</a></li>
+            <div class="navbar-top-header">
+                <div class="navbar-top-title">
+                    <div class="icono">
+                        <a href="index.html"> <img src="assets/media/logo_small_icon_only.png" alt="logo" width="40px" height="40px"></a>
+                    </div>
+                </div>
+                <div class="navbar-top-links">
+                    <ul>
+                        <li class="activo">
+                            <a class="activo" href="index.html">Inicio</a>
+                        </li>
+                        <li>
+                            <a href="blog.html">Blog</a>
+                        </li>
+                        <li>
+                            <a href="services.html">Servicios</a>
+                            <ul id="submenu">
+                                <li><a href="services.html">Sesiones</a></li>
+                                <li><a href="services.html">Bodas</a></li>
+                                <li><a href="services.html">Otros eventos</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="contact.html">Contacto</a>
+                        </li>
                     </ul>
-                </li>
-                <li>
-                    <a href="contact.html">Contacto</a>
-                </li>
-            </ul>
+                </div>
+
+            </div>
         </nav>
         <!-- 
             Dark mode toggler
@@ -53,30 +60,26 @@
     </header>
     <br>
 
-    <!-- Hero div -->
-    <div class="hero-img">
-        <button class="arr left"><img src="assets/media/flecha.png" alt="flecha"></button>
-        <div class="hero-text">
-            <!-- Aquí va una foto de fondo que se pone en la hoja de estilos -->
-            <h1>Alesvolta</h1>
+    <!-- UN DIV POR CADA FRUTA -->
+    <div class="fruta">
+        <div class="color-left">a</div>
+        <div class="color-right">b</div>
+        <div class="manzana">
+            <span>MANZANA</span>
+            <h1>Manzana</h1>
+            <div>
+                <span><a>Comprar ahora</a></span>
+            </div>
         </div>
-        <button class="arr right"><img src="assets/media/flecha.png" alt="flecha"></button>
-
-    </div>
-
-
-    <div class="big-container">
-        <div class="img-container">
-            <img class="sample-image" src="assets/media/cones.jpg">
+        <div>
+            <ul class="puntos-frutas">
+                <li class="activo punto-manzana"></li>
+                <li class="punto-pera"></li>
+                <li class="punto-platano"></li>
+                <li class="punto-coco"></li>
+            </ul>
         </div>
-        <div class="img-container">
 
-            <img class="sample-image" src="assets/media/ferriswheel.jpg">
-        </div>
-        <div class="img-container">
-
-            <img class="sample-image" src="assets/media/grape.jpg">
-        </div>
     </div>
 
     <footer>
