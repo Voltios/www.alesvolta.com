@@ -49,14 +49,6 @@
         width: 100%;
     }
     
-    .nav-container {
-        background-color: #6700EE;
-    }
-    
-    .nav-container a {
-        color: white;
-    }
-    
     header {
         display: flex;
         justify-content: space-between;
@@ -113,6 +105,16 @@
     .scroll {
         width: 80px;
         margin-top: 2em;
+    }
+    /* Cuando sea un móvil desaparecerá la imagen de scrolling */
+    
+    @media screen and (max-width:768px) {
+        .scroll {
+            display: none;
+        }
+        .scroll-text {
+            display: none;
+        }
     }
     
     .scroll-text {
@@ -255,8 +257,8 @@
         border: 8px solid gray;
         opacity: .5;
         border-radius: 50%;
-        top: -8px;
-        left: -8px;
+        top: -9px;
+        left: -9px;
         animation: cursorAnim2 1s infinite alternate;
     }
     
@@ -301,11 +303,19 @@
 
 */
     
+    .nav-container {
+        background-color: #6700EE;
+    }
+    
+    .nav-container a {
+        color: white;
+    }
+    
     .nav-container ul li {
         display: inline-block;
     }
     
-    .nav-container li::after {
+    .nav-container a::after {
         content: " ";
         width: 0px;
         height: 0.5px;
@@ -314,7 +324,7 @@
         transition: .3s;
     }
     
-    .nav-container li:hover::after {
+    .nav-container a:hover::after {
         width: 100%;
     }
     /*
@@ -448,8 +458,6 @@
         }
     }
     
-    .services-container ul li {}
-    
     .uno {
         animation-delay: .2s;
     }
@@ -495,9 +503,8 @@
         text-align: center;
         border-collapse: collapse;
         border: 10px solid var(--azul);
-        margin-left: auto;
+        margin: 2em auto;
         background-color: white;
-        margin-right: auto;
     }
     
     table td,
@@ -550,21 +557,29 @@
     FOOTER BEGINS
 */
     
-    footer {
-        position: relative;
-        bottom: 0;
+    .footer-container {
+        background-color: var(--interior-melon);
+    }
+    
+    .footer-container a {
+        color: black;
+    }
+    
+    .footer-container ul li {
+        display: inline-block;
+    }
+    
+    .footer-container a::after {
+        content: " ";
+        width: 0px;
+        height: 0.5px;
+        display: block;
+        background: black;
+        transition: .3s;
+    }
+    
+    .footer-container a:hover::after {
         width: 100%;
-    }
-    
-    .footer-list {
-        display: inline;
-        float: right;
-    }
-    
-    .footer-list-item {
-        padding: 0 5px;
-        display: inline;
-        float: right;
     }
     /*
     FOOTER ENDS
