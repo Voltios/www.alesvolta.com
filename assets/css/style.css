@@ -364,18 +364,6 @@
         padding-top: 40px;
     }
     
-    .uno {
-        animation-delay: .2s;
-    }
-    
-    .two {
-        animation-delay: 0s;
-    }
-    
-    .three {
-        animation-delay: 1s;
-    }
-    
     .services-container ul li {
         background-color: var(--interior-pera);
         padding: 2em;
@@ -605,7 +593,21 @@
     }
     /*
     FOOTER ENDS
-*/
+    */
+    
+    .footer-main {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .gears {
+        flex: 1 0 auto;
+    }
+    
+    .footer-404 {
+        flex-shrink: 0;
+    }
     /* MEDIA AND KEYFRAMES */
     
     @media (min-width:1024px) {
