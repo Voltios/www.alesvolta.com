@@ -7,11 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
     <title>alesvolta - Contacto</title>
 </head>
 
 <body>
+
     <div class="cursor"></div>
     <script>
         const cursor = document.querySelector('.cursor');
@@ -44,47 +45,74 @@
                 </ul>
             </nav>
         </header>
-        <div class="social-header">
-            <ul>
-                <li>
-                    <a href="#"><img src="assets/media/twitter.png" alt="twitter"></a>
-                </li>
-                <li>
-                    <a href="#"><img src="assets/media/instagram.png" alt="instagram"></a>
-                </li>
-                <li>
-                    <a href="#"><img src="assets/media/snapchat.png" alt="snapchat"></a>
-                </li>
-            </ul>
+
+    </div>
+    <section class="formulary">
+        <form action="form.php">
+            <fieldset>
+                <legend>Datos personales</legend>
+                <label name="fname">Nombre y apellidos</label>
+                <br>
+                <input type="tel" placeholder="Nombre y apellidos:">
+                <br>
+                <label name="fphone ">Teléfono</label>
+                <br>
+                <input type="text" placeholder="Teléfono:">
+                <br>
+                <label name="femail">email</label>
+                <br>
+                <input type="email" placeholder="correo@ejemplo.com">
+                <br>
+                <label name="fbirthdate">Fecha de nacimiento</label>
+                <br>
+                <input type="date" value="01/01/2000">
+                <br>
+                <label name="fcolor">Color favorito</label>
+                <br>
+                <input type="color">
+                <br>
+                <label name="fcountry">País de residencia</label>
+                <select>
+                    <option value="xx">Elige un país</option>
+                    <optgroup label="Europa">
+                        <option value="es">España</option>
+                        <option value="it">Italia</option>
+                        <option value="fr">Francia</option>
+                    </optgroup>
+                    <optgroup label="América">
+                        <option value="ar">Argentina</option>
+                        <option value="br">Brasil</option>
+                        <option value="mx">México</option>
+                    </optgroup>
+                </select>
+                <br>
+                <label name="fmessage">Mensaje</label>
+                <br>
+                <textarea placeholder="Introduce un mensaje adicional" resize="none"></textarea>
+                <br>
+            </fieldset>
+            <div class="btn-container">
+                <button type="submit">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span> Enviar 
+                </button>
+            </div>
+        </form>
+    </section>
+    <section>
+        <div class="redes">
+            <!-- Redes -->
+            <a href="https://www.instagram.com/v0lt4"><img width="30" height="30" src="assets/media/instagram.png" alt="instagram"></a>
+            <a href="https://www.twitter.com/alesvolta_"><img width="30" height="30" src="assets/media/twitter.png" alt="twitter"></a>
+            <a href="https://www.youtube.com"><img width="30" height="30" src="assets/media/youtube.png" alt="youtube"></a>
+            <a href="https://www.periscope.com"><img width="30" height="30" src="assets/media/periscopio.png" alt="periscope"></a>
+            <a href="https://www.reddit.com"><img width="30" height="30" src="assets/media/reddit.png" alt="reddit"></a>
+            <a href="https://www.paypal.com/paypalme/v0lt4"><img width="30" height="30" src="assets/media/paypal.png" alt="paypal"></a>
         </div>
-    </div>
 
-    <form action="">
-        <label name="fname">Nombre y apellidos</label>
-        <input type="text" placeholder="Nombre y apellidos:">
-        <br>
-        <label name="fphone ">Teléfono</label>
-        <input type="text" placeholder="Teléfono:">
-        <br>
-        <label name="femail">email</label>
-        <input type="email" placeholder="correo@ejemplo.com">
-        <br>
-        <label name="fmessage">Mensaje</label>
-        <input type="text" placeholder="Información adicional">
-        <br>
-        <input type="submit" value="Enviar">
-    </form>
-
-    <div>
-        <!-- Redes -->
-        <a href="https://www.instagram.com/v0lt4"><img width="30" height="30" src="assets/media/instagram.png" alt="instagram"></a>
-        <a href="https://www.twitter.com/alesvolta_"><img width="30" height="30" src="assets/media/twitter.png" alt="twitter"></a>
-        <a href="https://www.youtube.com"><img width="30" height="30" src="assets/media/youtube.png" alt="youtube"></a>
-        <a href="https://www.periscope.com"><img width="30" height="30" src="assets/media/periscopio.png" alt="periscope"></a>
-        <a href="https://www.reddit.com"><img width="30" height="30" src="assets/media/reddit.png" alt="reddit"></a>
-        <a href="https://www.paypal.com/paypalme/v0lt4"><img width="30" height="30" src="assets/media/paypal.png" alt="paypal"></a>
-    </div>
-
+    </section>
     <footer>
         <div class="footer-container">
             <header>
@@ -105,6 +133,7 @@
             </header>
         </div>
     </footer>
+
 </body>
 
 </html>
