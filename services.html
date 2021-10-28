@@ -11,101 +11,102 @@
     <title>alesvolta - Servicios</title>
 </head>
 
-<body class="serv-body">
+<body>
+    <div class="serv-body">
+        <div class="cursor"></div>
+        <script>
+            const cursor = document.querySelector('.cursor');
+            document.addEventListener('mousemove', e => {
+                cursor.setAttribute("style", "top: " + (e.pageY - 8) + "px; left: " + (e.pageX - 8) + "px;")
+            })
+            document.addEventListener('click', () => {
+                cursor.classList.add("expand");
 
-    <div class="cursor"></div>
-    <script src="assets/js/cursor.js">
-        const cursor = document.querySelector('.cursor');
-        document.addEventListener('mousemove', e => {
-            cursor.setAttribute("style", "top: " + (e.pageY - 8) + "px; left: " + (e.pageX - 8) + "px;")
-        })
-        document.addEventListener('click', () => {
-            cursor.classList.add("expand");
+                setTimeout(() => {
+                    cursor.classList.remove("expand");
+                }, 500)
+            });
+        </script>
 
-            setTimeout(() => {
-                cursor.classList.remove("expand");
-            }, 500)
-        });
-    </script>
-
-    <div class="nav-container">
-        <header>
-            <a href="index.html" class="logo">Ales Volta</a>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="services.html">Servicios</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contacto</a>
-                    </li>
-                    <li>
-                        <a href="blog.html">Blog</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-
-    </div>
-
-    <div class="serv-title">
-        <h2>Servicios</h2>
-    </div>
-
-
-    <section class="services">
-        <div class="services-container">
-            <ul>
-                <li>
-                    <div class="pic-container one">
-                        <img src="assets/media/wedding" alt="bodas">
-                    </div>
-                    <p class="service-title">Bodas</p>
-                    <p class="featured-desc service-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, hic?
-                    </p>
-                </li>
-                <li>
-                    <div class="pic-container two">
-                        <img src="assets/media/wedding" alt="Sesiones">
-                    </div>
-                    <p class="service-title">Sesiones</p>
-                    <p class="featured-desc service-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, hic?
-                    </p>
-                </li>
-                <li>
-                    <div class="pic-container three">
-                        <img src="assets/media/wedding" alt="otros">
-                    </div>
-                    <p class="service-title">Otros</p>
-                    <p class="featured-desc service-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, hic?
-                    </p>
-                </li>
-            </ul>
-        </div>
-
-    </section>
-
-
-    <footer>
-        <div class="footer-container">
+        <div class="nav-container">
             <header>
-                <a href="404.html" class="logo">404 Not found</a>
+                <a href="index.html" class="logo">Ales Volta</a>
                 <nav>
                     <ul>
                         <li>
-                            <a href="https://twitter.com/alesvolta_" target="_blank"><img src="assets/media/twitter.png" height="20px" width="20px" alt="twitter"></a>
+                            <a href="services.html">Servicios</a>
                         </li>
                         <li>
-                            <a href="https://instagram.com/alesvolta_" target="_blank"><img src="assets/media/instagram.png" alt="instagram" height="20px" width="20px"></a>
+                            <a href="contact.html">Contacto</a>
                         </li>
                         <li>
-                            <a href="https://snapchat.com/alesvolta_" target="_blank"><img src="assets/media/snapchat.png" alt="snapchat" height="20px" width="20px" /></a>
+                            <a href="blog.html">Blog</a>
                         </li>
                     </ul>
                 </nav>
             </header>
+
         </div>
-    </footer>
+
+        <div class="serv-title">
+            <h2>Servicios</h2>
+        </div>
+
+
+        <section class="services">
+            <div class="services-container">
+                <ul>
+                    <li>
+                        <div class="pic-container one">
+                            <img src="assets/media/wedding" alt="bodas">
+                        </div>
+                        <p class="service-title">Bodas</p>
+                        <p class="featured-desc service-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, hic?
+                        </p>
+                    </li>
+                    <li>
+                        <div class="pic-container two">
+                            <img src="assets/media/wedding" alt="Sesiones">
+                        </div>
+                        <p class="service-title">Sesiones</p>
+                        <p class="featured-desc service-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, hic?
+                        </p>
+                    </li>
+                    <li>
+                        <div class="pic-container three">
+                            <img src="assets/media/wedding" alt="otros">
+                        </div>
+                        <p class="service-title">Otros</p>
+                        <p class="featured-desc service-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, hic?
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+
+
+        <footer>
+            <div class="footer-container">
+                <header>
+                    <a href="404.html" class="logo">404 Not found</a>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="https://twitter.com/alesvolta_" target="_blank"><img src="assets/media/twitter.png" height="20px" width="20px" alt="twitter"></a>
+                            </li>
+                            <li>
+                                <a href="https://instagram.com/alesvolta_" target="_blank"><img src="assets/media/instagram.png" alt="instagram" height="20px" width="20px"></a>
+                            </li>
+                            <li>
+                                <a href="https://snapchat.com/alesvolta_" target="_blank"><img src="assets/media/snapchat.png" alt="snapchat" height="20px" width="20px" /></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+            </div>
+        </footer>
+    </div>
 </body>
 
 </html>

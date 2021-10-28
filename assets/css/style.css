@@ -369,13 +369,9 @@
         padding: 2em;
         border-radius: 1em;
         margin-bottom: 1em;
-        /*
-        animation: flying-divs 3s infinite;
-        */
     }
     
     .services-container ul li .pic-container {
-        height: 100px;
         display: grid;
         place-content: center;
         margin: 0 auto;
