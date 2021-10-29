@@ -514,6 +514,14 @@
         text-transform: uppercase;
     }
     
+    fieldset {
+        margin: 0 -10px;
+    }
+    
+    fieldset legend {
+        padding-bottom: 15px;
+    }
+    
     input {
         width: 70vw;
         height: 50px;
@@ -530,6 +538,7 @@
         width: 70vw;
         height: 200px;
         transition: .5s;
+        padding: 10px;
     }
     
     .btn-container {
