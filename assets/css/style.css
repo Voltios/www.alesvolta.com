@@ -628,9 +628,10 @@
     */
     
     .not-found {
-        height: 100%;
         display: flex;
         flex-direction: column;
+        min-height: 100vh;
+        flex: 1;
     }
     
     .not-found h1 {
@@ -649,30 +650,36 @@
     
     .gears {
         flex: 1 0 auto;
+        display: flex;
+        justify-content: center;
     }
     
     .gear {
-        height: 200px;
-        width: 200px;
-        position: absolute;
+        height: 150px;
+        width: 150px;
+        position: fixed;
     }
     
     .uno {
-        top: 40vh;
-        left: 30vw;
+        top: 40%;
+        left: 25%;
         animation: girar 4500ms infinite linear;
     }
     
     .dos {
-        top: 32vh;
-        left: 39vw;
+        top: 26%;
+        left: 32%;
+        height: 160px;
+        width: 160px;
         animation: girar2 4500ms infinite linear;
         animation-delay: 0.7s;
     }
     
     .tres {
-        top: 42vh;
-        left: 48vw;
+        top: 490px;
+        left: 42.7%;
+        height: 125px;
+        width: 125px;
         animation: roto 500ms infinite normal;
     }
     
