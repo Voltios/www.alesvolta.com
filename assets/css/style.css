@@ -2,15 +2,15 @@
     @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Overpass&family=Roboto:wght@300&display=swap');
      :root {
         /* Variables globales */
-        --manzana: #FF0001;
-        --interior-manzana: #F4F2DD;
-        --complementario-manzana: #03c547;
-        --pera: #94f77b;
-        --interior-pera: #f3f589;
-        --complementario-pera: #AB3391;
-        --platano: #eefc2d;
-        --interior-platano: #f7f58e;
-        --complementario-platano: #000000;
+        --rojo: #FF0001;
+        --interior-rojo: #F4F2DD;
+        --complementario-rojo: #03c547;
+        --verde: #94f77b;
+        --interior-verde: #f3f589;
+        --complementario-verde: #AB3391;
+        --amarillo: #eefc2d;
+        --interior-amarillo: #f7f58e;
+        --complementario-amarillo: #000000;
         --coco: #492525;
         --interior-coco: #e0dfdf;
         --complementario-coco: #9e4ac5;
@@ -127,7 +127,7 @@
     }
     
     .hero {
-        background-color: var(--platano);
+        background-color: var(--amarillo);
         color: #000000;
         display: grid;
         text-align: center;
@@ -139,7 +139,7 @@
         margin: 0 auto;
         width: 170px;
         font-weight: bold;
-        color: var(--complementario-platano);
+        color: var(--complementario-amarillo);
     }
     
     .meet span {
@@ -413,7 +413,7 @@
     }
     
     .services-container ul li {
-        background-color: var(--interior-pera);
+        background-color: var(--interior-verde);
         padding: 2em;
         margin: 2em 0;
         border-radius: 1em;
@@ -487,8 +487,17 @@
         border-radius: 50px;
         position: fixed;
         bottom: 20px;
-        right: 30px;
+        right: 35px;
         font-size: 1em;
+    }
+    
+    .goto-top a {
+        color: var(--interior-melon);
+        font-weight: bold;
+        font-family: var(--overpass);
+        background-color: #3a0eb4a6;
+        padding: 10px;
+        border-radius: 20px;
     }
     /* FOOTER BEGINS */
     /* CONTACT BEGINS*/
@@ -504,43 +513,6 @@
         background-color: black;
     }
     
-    .formulary {
-        color: white;
-        background-color: #313131;
-        align-items: center;
-    }
-    
-    .formulary label {
-        text-transform: uppercase;
-    }
-    
-    fieldset {
-        margin: 0 -10px;
-    }
-    
-    fieldset legend {
-        padding-bottom: 15px;
-    }
-    
-    input {
-        width: 70vw;
-        height: 50px;
-        border-radius: 10px;
-        font-size: 1.4em;
-        padding: 5px;
-        border: none;
-        margin: 10px;
-        transition: .5s;
-    }
-    
-    textarea {
-        resize: none;
-        width: 70vw;
-        height: 200px;
-        transition: .5s;
-        padding: 10px;
-    }
-    
     .btn-container {
         display: flex;
         justify-content: center;
@@ -551,7 +523,7 @@
         height: 4em;
         width: 20vw;
         font-weight: bold;
-        position: absolute;
+        position: relative;
         display: block;
         padding: 15px 20px;
         text-transform: uppercase;
@@ -562,6 +534,7 @@
         color: #FFFFFF;
         overflow: hidden;
         border: none;
+        border-radius: 10px;
     }
     
     button[type=submit]:hover {
@@ -614,12 +587,14 @@
         animation: izquierda 1s linear infinite;
         animation-delay: .75s;
     }
-    
-    textarea::placeholder {
-        font-size: 1.5;
-        letter-spacing: .2em;
-    }
     /* CONTACT ENDS */
+    
+    #btn-fixed {
+        /*display: block;*/
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+    }
     
     .footer-container {
         background-color: var(--interior-melon);
@@ -857,3 +832,115 @@
         }
     }
     /* linea de la izquierda */
+    
+    .grande {
+        align-items: center;
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+        height: 100%;
+    }
+    
+    .form {
+        background-color: #15172b;
+        border-radius: 20px;
+        box-sizing: border-box;
+        height: max-content;
+        padding: 20px;
+        width: 80vw;
+        transition: .5s;
+    }
+    
+    .title {
+        color: #eee;
+        font-family: sans-serif;
+        font-size: 36px;
+        font-weight: 600;
+        margin-top: 30px;
+    }
+    
+    .subtitle {
+        color: #eee;
+        font-family: sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        margin-top: 10px;
+    }
+    
+    .input-container {
+        height: 50px;
+        position: relative;
+        width: 100%;
+    }
+    
+    .ic1 {
+        margin-top: 40px;
+    }
+    
+    .ic2 {
+        margin-top: 30px;
+    }
+    
+    textarea {
+        resize: none;
+        padding-top: 15px !important;
+    }
+    
+    .input {
+        background-color: #303245;
+        border-radius: 12px;
+        border: 0;
+        box-sizing: border-box;
+        color: #eee;
+        font-size: 18px;
+        height: 100%;
+        outline: 0;
+        padding: 4px 20px 0;
+        width: 100%;
+    }
+    
+    .cut {
+        background-color: #15172b;
+        border-radius: 10px;
+        height: 20px;
+        left: 20px;
+        position: absolute;
+        top: -20px;
+        transform: translateY(0);
+        transition: transform 200ms;
+        width: 76px;
+    }
+    
+    .cut-short {
+        width: 50px;
+    }
+    
+    .input:focus~.cut,
+    .input:not(:placeholder-shown)~.cut {
+        transform: translateY(8px);
+    }
+    
+    .placeholder {
+        color: #65657b;
+        font-family: sans-serif;
+        left: 20px;
+        line-height: 14px;
+        pointer-events: none;
+        position: absolute;
+        transform-origin: 0 50%;
+        transition: transform 200ms, color 200ms;
+        top: 20px;
+    }
+    
+    .input:focus~.placeholder,
+    .input:not(:placeholder-shown)~.placeholder {
+        transform: translateY(-30px) translateX(10px) scale(0.75);
+    }
+    
+    .input:not(:placeholder-shown)~.placeholder {
+        color: #808097;
+    }
+    
+    .input:focus~.placeholder {
+        color: #dc2f55;
+    }

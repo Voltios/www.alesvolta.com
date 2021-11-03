@@ -47,64 +47,46 @@
         </header>
 
     </div>
-    <section class="formulary">
-        <form action="form.php">
-            <fieldset>
-                <legend>Datos personales</legend>
-                <label name="fname">Nombre y apellidos</label>
-                <br>
-                <input type="text" placeholder="Nombre y apellidos:">
-                <br>
-                <label name="fphone ">Teléfono</label>
-                <br>
-                <input type="tel" placeholder="Teléfono:">
-                <br>
-                <label name="femail">email</label>
-                <br>
-                <input type="email" placeholder="correo@ejemplo.com">
-                <br>
-                <label name="fbirthdate">Fecha de nacimiento</label>
-                <br>
-                <input type="date" value="2000-01-01">
-                <br>
-                <label name="fcolor">Color favorito</label>
-                <br>
-                <input type="color">
-                <br>
-                <label name="fcountry">País de residencia</label>
-                <br>
-                <select>
-                    <option value="xx">Elige un país</option>
-                    <optgroup label="Europa">
-                        <option value="es">España</option>
-                        <option value="it">Italia</option>
-                        <option value="fr">Francia</option>
-                    </optgroup>
-                    <optgroup label="América">
-                        <option value="ar">Argentina</option>
-                        <option value="br">Brasil</option>
-                        <option value="mx">México</option>
-                    </optgroup>
-                </select>
-                <br>
-                <label name="fmessage">Mensaje</label>
-                <br>
-                <textarea placeholder="Introduce un mensaje adicional" resize="none"></textarea>
-                <br>
-            </fieldset>
+    <div class="grande">
+        <div class="form">
+            <div class="title">Bienvenido</div>
+            <div class="subtitle">Rellena el formulario de contacto</div>
+            <div class="input-container ic1">
+                <input id="firstname" class="input" type="text" placeholder=" " />
+                <div class="cut"></div>
+                <label for="firstname" class="placeholder">Nombre</label>
+            </div>
+            <div class="input-container ic2">
+                <input id="lastname" class="input" type="text" placeholder=" " />
+                <div class="cut"></div>
+                <label for="lastname" class="placeholder">Apellidos</label>
+            </div>
+            <div class="input-container ic2">
+                <input id="email" class="input" type="text" placeholder=" " />
+                <div class="cut cut-short"></div>
+                <label for="email" class="placeholder">Email</label>
+            </div>
+            <div class="input-container ic2">
+                <textarea id="message" class="input" placeholder="Introduce un mensaje adicional"></textarea>
+            </div>
+            <div class="input-container ic2">
+                <input id="age" type="text" class="input" placeholder=" " />
+                <div class="cut cut-short"></div>
+                <label for="age" class="placeholder">Edad</label>
+            </div>
             <div class="btn-container">
                 <button type="submit">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span> Enviar 
-                </button>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span> Enviar
+                    </button>
             </div>
-        </form>
-    </section>
-    <section>
+        </div>
+    </div>
+
+    <!-- <section>
         <div class="redes">
-            <!-- Redes -->
             <a href="https://www.instagram.com/v0lt4"><img width="30" height="30" src="assets/media/instagram.png" alt="instagram"></a>
             <a href="https://www.twitter.com/alesvolta_"><img width="30" height="30" src="assets/media/twitter.png" alt="twitter"></a>
             <a href="https://www.youtube.com"><img width="30" height="30" src="assets/media/youtube.png" alt="youtube"></a>
@@ -113,7 +95,7 @@
             <a href="https://www.paypal.com/paypalme/v0lt4"><img width="30" height="30" src="assets/media/paypal.png" alt="paypal"></a>
         </div>
 
-    </section>
+    </section> -->
     <div class="footer-container">
         <footer>
             <a href="404.html" class="logo">404 Not found</a>
