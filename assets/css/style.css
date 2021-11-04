@@ -593,11 +593,7 @@
         top: -20px;
         transform: translateY(0);
         transition: transform 200ms;
-        width: 76px;
-    }
-    
-    .cut-short {
-        width: 50px;
+        width: 70px;
     }
     
     .input:focus~.cut,
