@@ -1,7 +1,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Overpass&family=Roboto:wght@300&display=swap');
     @font-face {
         font-family: "Akira Expanded";
-        src: url("/assets/fonts/Akira\ Expanded\ Demo.otf") format("opentype");
+        src: local ("Akira Expanded"), url("/assets/fonts/Akira\ Expanded\ Demo.otf") format("opentype");
     }
     
     @font-face {
