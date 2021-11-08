@@ -1,5 +1,14 @@
-    @import url('http://fonts.cdnfonts.com/css/akira-expanded');
     @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Overpass&family=Roboto:wght@300&display=swap');
+    @font-face {
+        font-family: "Akira Expanded";
+        src: url("/assets/fonts/Akira\ Expanded\ Demo.otf") format("opentype");
+    }
+    
+    @font-face {
+        font-family: "Julius Sans One";
+        src: url("/assets/fonts/JuliusSansOne-Regular.ttf") format("truetype");
+    }
+    
      :root {
         /* Variables globales */
         --rojo: #FF0001;
@@ -82,7 +91,7 @@
         display: flex;
         justify-content: space-between;
         padding: 2em;
-        box-shadow: 10px black;
+        box-shadow: 1px -2px 10px var(--interior-melon);
         background-color: var(--interior-melon);
     }
     
