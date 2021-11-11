@@ -315,21 +315,9 @@
     .nav-container a:hover::after {
         width: 100%;
     }
-    /*
-
-    NAVIGATION MENU ENDS
-
-*/
-    /*
-    
-    INDEX BEGINS
-
-*/
-    /*
-
-    IMAGES CONTAINER BEGINS
-
-*/
+    /* NAVIGATION MENU ENDS */
+    /* INDEX BEGINS */
+    /* IMAGES CONTAINER BEGINS */
     
     .img-container {
         box-sizing: border-box;
@@ -348,9 +336,7 @@
         background-color: #765342;
         overflow: hidden;
     }
-    /*
-    IMAGES CONTAINER ENDS
-*/
+    /* IMAGES CONTAINER ENDS */
     
     .article-container article {
         height: 100%;
@@ -398,9 +384,7 @@
     article .author {
         font-weight: bold;
     }
-    /*
-    ASIDE CONTAINER BEGINS
-*/
+    /* ASIDE CONTAINER BEGINS */
     
     .navegador-articulos {
         margin: 20px 0 0 30px;
@@ -437,12 +421,8 @@
     .navegador-articulos li:hover::after {
         width: 100%;
     }
-    /*
-    ASIDE CONTAINER ENDS
-*/
-    /*
-    SERVICES BEGINS
-*/
+    /* ASIDE CONTAINER ENDS */
+    /* SERVICES BEGINS */
     
     .serv-body {
         background: linear-gradient(-45deg, #daa646, #c731c6, #2d78b9, #8307bd);
@@ -527,8 +507,18 @@
     table tr:nth-child(even):hover {
         transform: scaleY(0.6);
     }
-    /* 
-
+    
+    .overflow {
+        height: 150px;
+        width: 100%;
+        overflow: scroll;
+    }
+    /* Las imágenes que no contengan atributo alt aparecerán 
+    con un borde de 3 píxeles, sólido y de color rojo. */
+    
+    img:not([alt]) {
+        border: 3px solid red
+    }
     /* BOTON IR ARRIBA */
     
     .goto-top {
@@ -773,9 +763,7 @@
     .footer-container ul li {
         display: inline-block;
     }
-    /*
-    FOOTER ENDS
-    */
+    /* FOOTER ENDS */
     
     .not-found {
         display: flex;
@@ -1008,3 +996,20 @@
         }
     }
     /* linea de la izquierda */
+    
+    a[href$=".pdf"] {
+        margin: 40px;
+        margin-top: 200px !important;
+        color: red;
+    }
+    
+    a[href$=".pdf"]::after {
+        opacity: .5;
+        position: fixed;
+        background: lime;
+        border: 1px solid black;
+        outline: 2px solid red;
+        content: "text1: " url('http://jsfiddle.net/img/logo.png') " text2";
+        height: 40px;
+        width: 100px;
+    }
