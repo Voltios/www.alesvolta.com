@@ -1,20 +1,19 @@
     @import url('http://fonts.cdnfonts.com/css/akira-expanded');
     @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Overpass&family=Roboto:wght@300&display=swap');
+    @font-face {
+        font-family: "AkiraD";
+        src: local("AkiraD"), url("assets/fonts/akira_download.otf") format("opentype");
+    }
+    
      :root {
         /* Variables globales */
         --rojo: #FF0001;
-        --interior-rojo: #F4F2DD;
-        --complementario-rojo: #03c547;
-        --verde: #94f77b;
-        --interior-verde: #f3f589;
         --complementario-verde: #AB3391;
         --amarillo: #F0E600;
-        --interior-amarillo: #f7f58e;
         --complementario-amarillo: #000000;
         --coco: #492525;
         --interior-coco: #e0dfdf;
         --complementario-coco: #8307bd;
-        --melon: #6faa22;
         --interior-melon: #daa646;
         --roboto: 'Roboto', sans-serif;
         --overpass: 'Overpass', sans-serif;
@@ -42,7 +41,7 @@
     }
     
     h1 {
-        font-family: var(--akira);
+        font-family: var(--akira), "AkiraD", arial;
     }
     
     a {
@@ -123,7 +122,7 @@
     }
     
     h2 {
-        font-family: var(--akira);
+        font-family: var(--akira), "Akira";
     }
     
     .hero {
@@ -267,6 +266,7 @@
         position: absolute;
         transition-duration: 50ms;
         transition-timing-function: ease-out;
+        -webkit-animation: cursorAnim 1s infinite alternate;
         animation: cursorAnim 1s infinite alternate;
         pointer-events: none;
         z-index: 10;
@@ -282,10 +282,12 @@
         border-radius: 50%;
         top: -9px;
         left: -9px;
+        -webkit-animation: cursorAnim2 1s infinite alternate;
         animation: cursorAnim2 1s infinite alternate;
     }
     
     .expand {
+        -webkit-animation: cursorAnim3 .3s forwards;
         animation: cursorAnim3 .3s forwards;
         border: 1px solid black;
     }
@@ -346,7 +348,7 @@
         margin: 20px;
     }
     
-    iframe[src="https://www.youtube"] {
+    iframe {
         margin: 1em auto;
         padding: 20px;
         justify-content: center;
@@ -356,13 +358,18 @@
         margin-top: 20px;
         text-align: center;
         text-decoration: underline;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
         user-select: none;
     }
     
     article p {
+        margin: 20px;
         padding: 10px 20px;
         line-height: 1.5em;
         text-align: justify;
+        transition: all .3s;
     }
     
     article p::first-letter {
@@ -371,8 +378,14 @@
     }
     
     article q {
-        margin: 20px 3px 20px 50px;
+        margin: 20px 3px 200px 50px;
         font-style: italic;
+    }
+    
+    article *::-moz-selection,
+    article::-moz-selection {
+        color: var(--interior-melon);
+        background-color: var(--complementario-verde);
     }
     
     article *::selection,
@@ -384,10 +397,19 @@
     article .author {
         font-weight: bold;
     }
+    
+    article iframe {
+        width: 100%;
+        margin: 1em auto;
+        padding: 20px;
+        justify-content: center;
+    }
     /* ASIDE CONTAINER BEGINS */
     
     .navegador-articulos {
         margin: 20px 0 0 30px;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
         width: fit-content;
     }
     
@@ -426,6 +448,7 @@
     
     .serv-body {
         background: linear-gradient(-45deg, #daa646, #c731c6, #2d78b9, #8307bd);
+        -webkit-animation: gradient 15s ease infinite;
         animation: gradient 15s ease infinite;
         background-size: 500% 500%;
     }
@@ -527,8 +550,8 @@
         background-color: var(--lila);
         border-radius: 50px;
         position: fixed;
-        bottom: 55px;
-        right: 35px;
+        bottom: 65px;
+        right: 135px;
         font-size: 1em;
     }
     
@@ -566,6 +589,8 @@
         background-color: #15172b;
         border-radius: 20px;
         box-sizing: border-box;
+        height: -webkit-max-content;
+        height: -moz-max-content;
         height: max-content;
         padding: 20px;
         width: 80vw;
@@ -621,8 +646,12 @@
     }
     
     .input[type="number"]::-webkit-inner-spin-button,
-    .input[type="number"]::-webkit-outer-spin-button {
+    .input[type="number"]::-webkit-outer-spin-button,
+    .input[type="number"] {
+        -webkit-appearance: none;
         appearance: none;
+        -moz-appearance: textfield;
+        /* Deprecated */
     }
     
     .cut {
@@ -640,6 +669,62 @@
     .input:focus~.cut,
     .input:not(:placeholder-shown)~.cut {
         transform: translateY(8px);
+    }
+    
+    textarea::-webkit-input-placeholder {
+        color: #65657b;
+        font-family: sans-serif;
+        left: 20px;
+        line-height: 14px;
+        font-size: inherit;
+        pointer-events: none;
+        position: absolute;
+        transform-origin: 0 50%;
+        -webkit-transition: transform 200ms, color 200ms;
+        transition: transform 200ms, color 200ms;
+        top: 20px;
+    }
+    
+    textarea::-moz-placeholder {
+        color: #65657b;
+        font-family: sans-serif;
+        left: 20px;
+        line-height: 14px;
+        font-size: inherit;
+        pointer-events: none;
+        position: absolute;
+        transform-origin: 0 50%;
+        -moz-transition: transform 200ms, color 200ms;
+        transition: transform 200ms, color 200ms;
+        top: 20px;
+    }
+    
+    textarea:-ms-input-placeholder {
+        color: #65657b;
+        font-family: sans-serif;
+        left: 20px;
+        line-height: 14px;
+        font-size: inherit;
+        pointer-events: none;
+        position: absolute;
+        transform-origin: 0 50%;
+        -ms-transition: transform 200ms, color 200ms;
+        transition: transform 200ms, color 200ms;
+        top: 20px;
+    }
+    
+    textarea::-ms-input-placeholder {
+        color: #65657b;
+        font-family: sans-serif;
+        left: 20px;
+        line-height: 14px;
+        font-size: inherit;
+        pointer-events: none;
+        position: absolute;
+        transform-origin: 0 50%;
+        -ms-transition: transform 200ms, color 200ms;
+        transition: transform 200ms, color 200ms;
+        top: 20px;
     }
     
     textarea::placeholder,
@@ -711,6 +796,7 @@
         width: 100%;
         height: 3px;
         background: linear-gradient(90deg, transparent, #BB02E0);
+        -webkit-animation: arriba 1s linear infinite;
         animation: arriba 1s linear infinite;
     }
     
@@ -720,7 +806,9 @@
         width: 3px;
         height: 100%;
         background: linear-gradient(180deg, transparent, #BB02E0);
+        -webkit-animation: derecha 1s linear infinite;
         animation: derecha 1s linear infinite;
+        -webkit-animation-delay: .25s;
         animation-delay: .25s;
     }
     
@@ -730,7 +818,9 @@
         width: 100%;
         height: 3px;
         background: linear-gradient(270deg, transparent, #BB02E0);
+        -webkit-animation: abajo 1s linear infinite;
         animation: abajo 1s linear infinite;
+        -webkit-animation-delay: .50s;
         animation-delay: .50s;
     }
     
@@ -740,7 +830,9 @@
         width: 3px;
         height: 100%;
         background: linear-gradient(360deg, transparent, #BB02e0);
+        -webkit-animation: izquierda 1s linear infinite;
         animation: izquierda 1s linear infinite;
+        -webkit-animation-delay: .75s;
         animation-delay: .75s;
     }
     /* CONTACT ENDS */
@@ -748,8 +840,8 @@
     #btn-fixed {
         /*display: block;*/
         position: fixed;
-        bottom: 60px;
-        right: 10px;
+        bottom: 68px;
+        right: 100px;
     }
     
     .footer-container {
@@ -801,6 +893,7 @@
     .uno {
         top: 40%;
         left: 25%;
+        -webkit-animation: girar 4500ms infinite linear;
         animation: girar 4500ms infinite linear;
     }
     
@@ -809,7 +902,9 @@
         left: 32%;
         height: 160px;
         width: 160px;
+        -webkit-animation: girar2 4500ms infinite linear;
         animation: girar2 4500ms infinite linear;
+        -webkit-animation-delay: 0.7s;
         animation-delay: 0.7s;
     }
     
@@ -818,6 +913,7 @@
         left: 42.7%;
         height: 125px;
         width: 125px;
+        -webkit-animation: roto 500ms infinite normal;
         animation: roto 500ms infinite normal;
     }
     
@@ -825,6 +921,15 @@
         flex-shrink: 0;
     }
     /* MEDIA AND KEYFRAMES */
+    
+    @-webkit-keyframes girar {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
     
     @keyframes girar {
         from {
@@ -835,12 +940,30 @@
         }
     }
     
+    @-webkit-keyframes girar2 {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(-360deg);
+        }
+    }
+    
     @keyframes girar2 {
         from {
             transform: rotate(0deg);
         }
         to {
             transform: rotate(-360deg);
+        }
+    }
+    
+    @-webkit-keyframes roto {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(10deg);
         }
     }
     
@@ -866,6 +989,7 @@
             cursor: default;
         }
         .serv-content {
+            -webkit-animation: none;
             animation: none;
             position: absolute;
             display: flex;
@@ -876,6 +1000,16 @@
         .cursor::after {
             display: none;
         }
+        .grande {
+            height: -webkit-max-content;
+            height: -moz-max-content;
+            height: max-content;
+            padding: 30px 0;
+        }
+        article p {
+            margin: 10px;
+            transition: all .3s;
+        }
     }
     /* Cuando sea un móvil desaparecerá la imagen y el texto de scrolling */
     
@@ -885,9 +1019,6 @@
         }
         .scroll-text {
             display: none;
-        }
-        .form {
-            width: 90vw;
         }
     }
     /*Cambiamos la paleta de colores de servicios para las pantallas
@@ -908,6 +1039,18 @@
             height: 20px;
             width: 20px;
         }
+        button[type=submit] {
+            width: 120px;
+        }
+    }
+    
+    @-webkit-keyframes cursorAnim {
+        from {
+            transform: scale(1);
+        }
+        to {
+            transform: scale(.8);
+        }
     }
     
     @keyframes cursorAnim {
@@ -919,12 +1062,34 @@
         }
     }
     
+    @-webkit-keyframes cursorAnim2 {
+        from {
+            transform: scale(1);
+        }
+        to {
+            transform: scale(.4);
+        }
+    }
+    
     @keyframes cursorAnim2 {
         from {
             transform: scale(1);
         }
         to {
             transform: scale(.4);
+        }
+    }
+    
+    @-webkit-keyframes cursorAnim3 {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(3);
+        }
+        100% {
+            transform: scale(1);
+            opacity: 0;
         }
     }
     
@@ -941,6 +1106,18 @@
         }
     }
     
+    @-webkit-keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+    
     @keyframes gradient {
         0% {
             background-position: 0% 50%;
@@ -954,6 +1131,16 @@
     }
     /*linea de arriba*/
     
+    @-webkit-keyframes arriba {
+        0% {
+            left: -100%;
+        }
+        50%,
+        100% {
+            left: 100%;
+        }
+    }
+    
     @keyframes arriba {
         0% {
             left: -100%;
@@ -964,6 +1151,16 @@
         }
     }
     /*linea de la derecha*/
+    
+    @-webkit-keyframes derecha {
+        0% {
+            top: -100%;
+        }
+        50%,
+        100% {
+            top: 100%;
+        }
+    }
     
     @keyframes derecha {
         0% {
@@ -976,6 +1173,16 @@
     }
     /* linea de abajo */
     
+    @-webkit-keyframes abajo {
+        0% {
+            right: -100%;
+        }
+        50%,
+        100% {
+            right: 100%;
+        }
+    }
+    
     @keyframes abajo {
         0% {
             right: -100%;
@@ -983,6 +1190,16 @@
         50%,
         100% {
             right: 100%;
+        }
+    }
+    
+    @-webkit-keyframes izquierda {
+        0% {
+            bottom: -100%;
+        }
+        50%,
+        100% {
+            bottom: 100%;
         }
     }
     
@@ -997,19 +1214,18 @@
     }
     /* linea de la izquierda */
     
+    .pdf-container {
+        margin-top: 20px;
+        padding-left: 20px;
+    }
+    
     a[href$=".pdf"] {
-        margin: 40px;
-        margin-top: 200px !important;
         color: red;
+        padding-right: 20px;
     }
     
     a[href$=".pdf"]::after {
-        opacity: .5;
-        position: fixed;
-        background: lime;
-        border: 1px solid black;
-        outline: 2px solid red;
-        content: "text1: " url('http://jsfiddle.net/img/logo.png') " text2";
-        height: 40px;
-        width: 100px;
+        font-family: "Font Awesome 5 free";
+        padding-left: 5px;
+        content: "\f1c1";
     }
