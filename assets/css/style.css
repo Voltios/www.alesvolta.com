@@ -295,6 +295,7 @@
     
     .nav-container {
         background-color: #6700EE;
+        box-shadow: 0px 4px 15px var(--complementario-coco);
     }
     
     .nav-container a {
@@ -346,6 +347,8 @@
     
     hr {
         margin: 20px;
+        height: 2px;
+        border-color: black;
     }
     
     iframe {
@@ -362,6 +365,7 @@
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
+        text-shadow: 4px 4px 2px #3a0eb4a6;
     }
     
     article p {
@@ -380,6 +384,12 @@
     article q {
         margin: 20px 3px 200px 50px;
         font-style: italic;
+    }
+    
+    article *::-moz-selection,
+    article::-moz-selection {
+        color: var(--interior-melon);
+        background-color: var(--complementario-verde);
     }
     
     article *::-moz-selection,
@@ -491,7 +501,7 @@
     .serv-title h2 {
         text-align: center;
         width: 100%;
-        font-size: 4em;
+        font-size: 3rem;
     }
     /* SERVICES ENDS */
     
@@ -533,7 +543,8 @@
     
     .overflow {
         height: 150px;
-        width: 100%;
+        margin: 0 auto;
+        width: 95%;
         overflow: scroll;
     }
     /* Las imágenes que no contengan atributo alt aparecerán 
@@ -547,12 +558,18 @@
     .goto-top {
         padding: 20px;
         color: black;
-        background-color: var(--lila);
         border-radius: 50px;
         position: fixed;
         bottom: 65px;
-        right: 135px;
+        right: 85px;
         font-size: 1em;
+    }
+    
+    #btn-fixed {
+        /*display: block;*/
+        position: fixed;
+        bottom: 68px;
+        right: 50px;
     }
     
     .goto-top a {
@@ -582,7 +599,7 @@
         background-color: #000;
         display: flex;
         justify-content: center;
-        height: 100%;
+        height: 100% !important;
     }
     
     .form {
@@ -837,13 +854,6 @@
     }
     /* CONTACT ENDS */
     
-    #btn-fixed {
-        /*display: block;*/
-        position: fixed;
-        bottom: 68px;
-        right: 100px;
-    }
-    
     .footer-container {
         background-color: var(--interior-melon);
     }
@@ -1000,24 +1010,25 @@
         .cursor::after {
             display: none;
         }
-        .grande {
-            height: -webkit-max-content;
-            height: -moz-max-content;
-            height: max-content;
-            padding: 30px 0;
-        }
         article p {
             margin: 10px;
             transition: all .3s;
         }
     }
-    /* Cuando sea un móvil desaparecerá la imagen y el texto de scrolling */
+    /* Cuando sea un móvil desaparecerá la imagen y el texto de scrolling, además del icono de whatsapp */
     
     @media screen and (max-width:768px) {
         .scroll {
             display: none;
         }
         .scroll-text {
+            display: none;
+        }
+        .goto-top {
+            bottom: 20px;
+            right: 10px;
+        }
+        #btn-fixed {
             display: none;
         }
     }
