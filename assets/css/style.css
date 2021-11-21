@@ -22,6 +22,11 @@
     }
     /* DEFAULT */
     
+    a>input {
+        margin-top: 20px;
+        padding: 10px;
+    }
+    
     * {
         margin: 0%;
         padding: 0%;
@@ -41,7 +46,7 @@
     }
     
     h1 {
-        font-family: var(--akira), "AkiraD", arial;
+        font-family: var(--akira), arial;
     }
     
     a {
