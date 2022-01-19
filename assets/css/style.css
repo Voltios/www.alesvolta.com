@@ -510,6 +510,33 @@
     }
     /* SERVICES ENDS */
     
+    .media-container {
+        text-align: center;
+        margin: 20px 0;
+    }
+    
+    .media-container video {
+        border-radius: 50px;
+        margin: 20px;
+    }
+    
+    .media-container input {
+        padding: 15px;
+        text-transform: capitalize;
+        font-size: 1.2em;
+        background-color: var(--complementario-coco);
+        border: none;
+        color: white;
+        font-weight: 500;
+        border-radius: 15px;
+        transition: all .3s ease;
+        margin-bottom: 20px;
+    }
+    
+    .media-container input:hover:not(input[type="range"]) {
+        background-color: #9824ce;
+    }
+    
     table {
         background-color: white;
         font-size: 4em;

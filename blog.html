@@ -60,7 +60,7 @@
                     <a href="#art1">Artículo 1</a>
                 </li>
                 <li>
-                    <a href="#art2">Artículo 2</a>
+                    <a href="#art2">Vídeo</a>
                 </li>
                 <li>
                     <a href="#art3">Artículo 3</a>
@@ -70,6 +70,9 @@
                 </li>
                 <li>
                     <a href="#art5">Artículo 5</a>
+                </li>
+                <li>
+                    <a href="#art6">Audio</a>
                 </li>
             </ol>
         </aside>
@@ -102,12 +105,19 @@
         </article>
         <hr>
         <article id="art2">
-            <h2>Titulo entrada 2</h2>
+            <h2>Vídeo</h2>
             <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero in aperiam molestiae veniam eveniet numquam amet? Nostrum nihil eligendi quaerat repellendus saepe in facilis? Consequatur incidunt dignissimos eos nemo minima. Voluptate magni ea repudiandae
-                modi. Nam dolore deleniti modi sequi unde animi dolorem assumenda possimus vel suscipit, consequuntur praesentium optio. Voluptate unde, necessitatibus eius accusantium eaque distinctio quo ipsum cupiditate. Numquam iste repellat doloribus
-                modi pariatur provident eligendi reiciendis, suscipit et? Aperiam at, <span> nostrum </span> blanditiis reprehenderit dolore illum, molestias praesentium deserunt amet deleniti necessitatibus! Optio et hic perferendis eveniet
-                natus.
+                Tenemos un vídeo de ejemplo que hemos puesto para el ejercicio 5.1. Este consiste en hacer los controles por javascript y así poder modificarlos a nuestro gusto.
+            </p>
+            <q>nose</q> - <span class="author">Ales Volta</span>
+            <p>
+                Partint del següent codi <a href="codepen.io/Eniun/pen/vYYvNNd" target="_blank">(codepen.io/Eniun/pen/vYYvNNd)</a> en el qual estan implementades les funcionalitats dels botons play/pause.
+
+                <br>En prémer el botó “reiniciar” si el vídeo està iniciat es reiniciarà, és a dir, començarà a reproduir-se de nou des de l'inici. En prémer el botó “retardar” la reproducció del vídeo saltarà 5 segons cap endarrere. En prémer el botó
+                “avançar” la reproducció del vídeo saltarà 5 segons cap avant. En prémer el botó “silenciar” el so del vídeo es desactivarà i el text del botó canviarà a “escoltar”. En tornar a prémer el botó s'activarà el so i es canviarà de nou el text
+                a “silenciar”. En prémer el botó “menosVolumen” es baixarà el volum del vídeo 0.1 punts fins a arribar a 0. En prémer el botó masVolumen( ) es pujarà el volum del vídeo 0.1 punts fins a arribar a 1. Inclou el vídeo de Big Buck Bunny (clips.vorwaerts-gmbh.de/big_buck_bunny.mp4)
+                amb totes les seues funcionalitats en una nova entrada del blog del teu projecte web amb el títol “Control de vídeo”. Aplica estils als botons tenint en compte la teua guia d'estil i realitza els ajustos necessaris perquè s'adapte als
+                diferents dispositius.
             </p>
             <q>quote</q> - <span class="author">Author</span>
             <p>
@@ -116,14 +126,26 @@
                 modi pariatur provident eligendi reiciendis, suscipit et? Aperiam at, <span> nostrum </span> blanditiis reprehenderit dolore illum, molestias praesentium deserunt amet deleniti necessitatibus! Optio et hic perferendis eveniet
                 natus.
             </p>
-            <q>quote</q> - <span class="author">Author</span>
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero in aperiam molestiae veniam eveniet numquam amet? Nostrum nihil eligendi quaerat repellendus saepe in facilis? Consequatur incidunt dignissimos eos nemo minima. Voluptate magni ea repudiandae
-                modi. Nam dolore deleniti modi sequi unde animi dolorem assumenda possimus vel suscipit, consequuntur praesentium optio. Voluptate unde, necessitatibus eius accusantium eaque distinctio quo ipsum cupiditate. Numquam iste repellat doloribus
-                modi pariatur provident eligendi reiciendis, suscipit et? Aperiam at, <span> nostrum </span> blanditiis reprehenderit dolore illum, molestias praesentium deserunt amet deleniti necessitatibus! Optio et hic perferendis eveniet
-                natus.
-            </p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/FhJR6OO1X8Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <div class="media-container">
+                <video id="medio" width="720" height="400">
+                    <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4">
+                    <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv">
+                  </video>
+
+
+                <nav>
+                    <input type="button" id="reiniciar" value="reiniciar">
+                    <input type="button" id="retrasar" value="&laquo;">
+                    <input type="button" id="play" value="&#9658;">
+                    <input type="button" id="adelantar" value="&raquo;">
+                    <input type="button" id="silenciar" value="silenciar">
+                    <label>Volumen</label>
+                    <input type="button" id="menosVolumen" value="-">
+                    <input type="button" id="masVolumen" value="+">
+                    <input type="button" id="sonido" value="🔊">
+                </nav>
+            </div>
         </article>
         <hr>
         <article id="art3">
@@ -203,7 +225,23 @@
         </div>
 
     </div>
+    <article id="art6">
+        <h2>Audio de ejemplo</h2>
+        <p>Aquí el audio de ejemplo para el ejercicio 5.2</p>
+        <div class="media-container">
 
+            <audio src="assets/media/sounds/lovelost-macmiller.mp3" id="audio1"></audio>
+            <audio src="assets/media/sounds/yanohayverano-dep.mp3" id="audio2"></audio>
+            <audio src="assets/media/sounds/segonaconjugacio-lafumiga.mp3" id="audio3"></audio>
+            <audio src="assets/media/sounds/tanvacio-walls.mp3" id="audio4"></audio>
+
+            <input type="button" value="Love lost - Mac Miller" id="player1">
+            <input type="button" value="Ya no hay verano - Depresión Sonora" id="player2">
+            <input type="button" value="Segona conjugació - La Fúmiga" id="player3">
+            <input type="button" value="Tan vacío - Walls & Hens" id="player4">
+
+        </div>
+    </article>
 
     <div class="tabla-elementos">
         <table>
@@ -250,5 +288,8 @@
     </div>
 
 </body>
+
+<script src="assets/js/videoPlayer.js"></script>
+<script src="assets/js/audioPlayer.js"></script>
 
 </html>
