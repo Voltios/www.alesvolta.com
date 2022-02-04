@@ -15,11 +15,11 @@ function accionPlay() {
 
 function accionReiniciar() {
     medio.currentTime = 0;
-    medio.play();
-    play.value = "||"
-        //Usar propiedad .currentTime
-        //Reproducir el vídeo
-        //Cambiar el valor del botón a ||
+    medio.pause();
+    play.value = "►";
+    //Usar propiedad .currentTime
+    //Reproducir el vídeo
+    //Cambiar el valor del botón a ||
 }
 
 function accionRetrasar() {

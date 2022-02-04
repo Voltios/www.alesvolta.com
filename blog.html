@@ -60,10 +60,10 @@
                     <a href="#art1">Artículo 1</a>
                 </li>
                 <li>
-                    <a href="#art2">Vídeo</a>
+                    <a href="#art2">Vídeo 1</a>
                 </li>
                 <li>
-                    <a href="#art3">Artículo 3</a>
+                    <a href="#art3">Vídeo 2</a>
                 </li>
                 <li>
                     <a href="#art4">Artículo 4</a>
@@ -128,8 +128,14 @@
             </p>
 
             <div class="media-container">
+
+
                 <video id="medio" width="720" height="400">
-                    <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4">
+                    <source src="assets/media/videos/miau.mp4">
+                    <source src="assets/media/videos/miau.webm">
+                    <source src="assets/media/videos/miau.ogg">
+                    
+                    <!-- <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"> -->
                     <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv">
                   </video>
 
@@ -149,7 +155,15 @@
         </article>
         <hr>
         <article id="art3">
-            <h2>Titulo entrada 3</h2>
+            <h2>Vídeo 2</h2>
+            <div class="media-container">
+
+                <video width="720" controls>
+                    <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4">
+                    <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv">
+                </video>
+            </div>
+
             <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero in aperiam molestiae veniam eveniet numquam amet? Nostrum nihil eligendi quaerat repellendus saepe in facilis? Consequatur incidunt dignissimos eos nemo minima. Voluptate magni ea repudiandae
                 modi. Nam dolore deleniti modi sequi unde animi dolorem assumenda possimus vel suscipit, consequuntur praesentium optio. Voluptate unde, necessitatibus eius accusantium eaque distinctio quo ipsum cupiditate. Numquam iste repellat doloribus
@@ -230,15 +244,15 @@
         <p>Aquí el audio de ejemplo para el ejercicio 5.2</p>
         <div class="media-container">
 
-            <audio src="assets/media/sounds/lovelost-macmiller.mp3" id="audio1"></audio>
+            <!-- <audio src="assets/media/sounds/lovelost-macmiller.mp3" id="audio1"></audio>
             <audio src="assets/media/sounds/yanohayverano-dep.mp3" id="audio2"></audio>
-            <audio src="assets/media/sounds/segonaconjugacio-lafumiga.mp3" id="audio3"></audio>
-            <audio src="assets/media/sounds/tanvacio-walls.mp3" id="audio4"></audio>
+            <audio src="assets/media/sounds/segonaconjugacio-lafumiga.ogg" id="audio3"></audio>
+            <audio src="assets/media/sounds/tanvacio-walls.ogg" id="audio4"></audio> -->
 
-            <input type="button" value="Love lost - Mac Miller" id="player1">
-            <input type="button" value="Ya no hay verano - Depresión Sonora" id="player2">
-            <input type="button" value="Segona conjugació - La Fúmiga" id="player3">
-            <input type="button" value="Tan vacío - Walls & Hens" id="player4">
+            <input type="button" value="Love lost - Mac Miller (mp3)" id="player1">
+            <input type="button" value="Ya no hay verano - Depresión Sonora (mp3)" id="player2">
+            <input type="button" value="Segona conjugació - La Fúmiga (ogg)" id="player3">
+            <input type="button" value="Tan vacío - Walls & Hens (ogg)" id="player4">
 
         </div>
     </article>
@@ -273,6 +287,13 @@
             <a href="404.html" class="logo">404 Not found</a>
             <nav>
                 <ul>
+                    <li>
+                        <a href="http://www.w3.org/WAI/WCAG1AA-Conformance" title="Explicación del Nivel Doble-A de 
+                        Conformidad">
+                            <img height="32" width="88" src="http://www.w3.org/WAI/wcag1AA" alt="Icono de conformidad con el Nivel Doble-A, 
+                        de las Directrices de Accesibilidad para el 
+                        Contenido Web 1.0 del W3C-WAI"></a>El doble a <b>brrr</b>
+                    </li>
                     <li>
                         <a href="https://twitter.com/alesvolta_" target="_blank"><img src="assets/media/twitter.png" height="20" width="20" alt="twitter"></a>
                     </li>
